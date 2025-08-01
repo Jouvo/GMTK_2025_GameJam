@@ -1,27 +1,24 @@
-using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class VCam : MonoBehaviour
 {
-    public CinemachineVirtualCamera virtualCamera;
 
-    private void Start()
+    // Start is called before the first frame update
+    void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
-    // 切换跟随目标
-    public void ChangeFollowTarget(Transform newTarget)
+    public void MoveToPos(Vector3 pos)
     {
-        virtualCamera.Follow = newTarget; // 修改跟随位置
-        //virtualCamera.LookAt = newTarget; // 修改注视目标
+        transform.position = pos;
     }
 }

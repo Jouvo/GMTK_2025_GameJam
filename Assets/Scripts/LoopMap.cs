@@ -25,10 +25,10 @@ public class LoopMap : MonoBehaviour
             loadMap_Position.x += total_width;
             transform.position = loadMap_Position;
         }
-        //else if (mainCam.transform.position.x < transform.position.x - total_width / 2)
-        //{
-        //    loadMap_Position.x-=total_width;
-        //    transform.position = loadMap_Position;
-        //}
+        else if (mainCam.transform.position.x < transform.position.x - total_width / 2)
+        {
+            loadMap_Position.x -= total_width;
+            transform.position = loadMap_Position;
+        }
     }
 }

@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Distructible
+  - Lava
+  - Ice
   layers:
   - Default
   - TransparentFX
