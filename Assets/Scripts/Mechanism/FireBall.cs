@@ -4,35 +4,33 @@ using UnityEngine;
 
 public class FireBall : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     // 火球击中某物时
     private void OnTriggerEnter2D(Collider2D collision)
     {
         
-        if (collision.gameObject.tag =="Distructible")
+        if (collision.tag =="Distructible")
         {
-            Debug.Log("FireBall命中物体");
+            Debug.Log("FireBall命中可破坏物体");
             Destroy(collision.gameObject);
+            BulletDestroy();
         }
-        else
+        else if(collision.tag == "Lava")
         {
-
+            Lava lava= collision.gameObject.GetComponent<Lava>();
+            lava.Hit();
+            BulletDestroy();
         }
+        else if(collision.tag == "Default")
+        {
+            BulletDestroy();
+        }
+    }
 
+    private void BulletDestroy()
+    {
         // 销毁子弹
         Destroy(gameObject);
-
     }
 
 }

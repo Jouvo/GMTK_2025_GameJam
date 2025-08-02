@@ -18,7 +18,8 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         // 设置默认复活点位置
-        transform.position = respawnPoint;
+        respawnPoint=transform.position;
+        Debug.Log("复活点位置为：" + respawnPoint);
     }
 
     void Start()

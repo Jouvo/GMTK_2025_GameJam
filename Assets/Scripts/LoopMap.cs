@@ -5,7 +5,7 @@ using UnityEngine;
 public class LoopMap : MonoBehaviour
 {
     GameObject mainCam;
-    float map_width = 30;
+    float map_width = 50;
     float total_width;
     int mapNums = 3;
 
