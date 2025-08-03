@@ -7,7 +7,7 @@ public class LoopMap : MonoBehaviour
     GameObject mainCam;
     float map_width = 50;
     float total_width;
-    int mapNums = 3;
+    int mapNums = 4;
 
     // Start is called before the first frame update
     void Start()
