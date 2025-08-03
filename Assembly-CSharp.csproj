@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\Mechanism\Crystal.cs" />
     <Compile Include="Assets\Scripts\Mechanism\Lava.cs" />
     <Compile Include="Assets\Scripts\IcePostProcess.cs" />
+    <Compile Include="Assets\Scripts\Mechanism\Key.cs" />
     <Compile Include="Assets\Scripts\Mechanism\IceBlock.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Mechanism\GameMgr.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Assets\Scripts\Player\Fire.cs" />
     <Compile Include="Assets\Scripts\PostProcess.cs" />
     <Compile Include="Assets\Scripts\Mechanism\DeadZone.cs" />
+    <Compile Include="Assets\Scripts\Mechanism\Door.cs" />
     <Compile Include="Assets\Scripts\Mechanism\DarkMask.cs" />
     <Compile Include="Assets\Scripts\ScreenScroll.cs" />
     <Compile Include="Assets\Scripts\VCam.cs" />
@@ -81,8 +83,6 @@
     <Compile Include="Assets\Scripts\Mechanism\StateMgr.cs" />
     <Compile Include="Assets\Scripts\Weapon.cs" />
     <Compile Include="Assets\Scripts\MainCamera.cs" />
-    <Compile Include="Assets\Scripts\Mechanism\Key.cs" />
-    <Compile Include="Assets\Scripts\Mechanism\Door.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
