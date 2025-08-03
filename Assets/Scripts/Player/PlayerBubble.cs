@@ -11,6 +11,13 @@ public class PlayerBubble : MonoBehaviour
     public GameObject player;
     public SpriteRenderer spriteRenderer;
     private Vector3 Pos;
+    public AudioClip clip;
+
+    private void OnEnable()
+    {
+        // ≤•∑≈“Ù–ß
+        SoundPlayer.Instance.PlaySounds(clip);
+    }
 
     // Start is called before the first frame update
     void Start()

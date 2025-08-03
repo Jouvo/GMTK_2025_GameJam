@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crystalID: 0
   flySpeed: 5
+  clip: {fileID: 8300000, guid: d2eef27180636c947a5997c96336b787, type: 3}
 --- !u!212 &4686373388830568830
 SpriteRenderer:
   m_ObjectHideFlags: 0

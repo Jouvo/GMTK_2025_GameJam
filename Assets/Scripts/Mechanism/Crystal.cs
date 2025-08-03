@@ -5,6 +5,7 @@ public class Crystal : MonoBehaviour
 {
     public int crystalID; // 水晶唯一标识，对应UI槽位
     public float flySpeed = 5f; // 飞向UI的速度
+    public AudioClip clip;
 
     private GameMgr gameMgr;
 
@@ -17,6 +18,8 @@ public class Crystal : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            // 播放音效
+            SoundPlayer.Instance.PlaySounds(clip);
             CollectCrystal();
         }
     }
@@ -37,6 +40,8 @@ public class Crystal : MonoBehaviour
         //yield return new WaitForSeconds(0.1f);
 
         // 播放音效或粒子特效（可选）
+
+        
 
         // 点亮对应槽位
         gameMgr.crystalSlots[crystalID].color = new Color(1, 1, 1, 1);

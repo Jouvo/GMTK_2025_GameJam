@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spRenderer: {fileID: 0}
   Duration: 0.5
+  clip: {fileID: 8300000, guid: 956f5e6ae6fdb6546af67a0cd4d6a392, type: 3}
 --- !u!212 &6120757807985780645
 SpriteRenderer:
   m_ObjectHideFlags: 0

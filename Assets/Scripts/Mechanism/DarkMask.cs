@@ -7,6 +7,7 @@ public class DarkMask : MonoBehaviour
 {
     public SpriteRenderer spRenderer;
     public float Duration = 0.5f;
+    public AudioClip clip;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,8 @@ public class DarkMask : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag=="Player")
+        // ≤•∑≈“Ù–ß
+        SoundPlayer.Instance.PlaySounds(clip);
         StartCoroutine(FadeOut());
     }
 

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Key : MonoBehaviour
 {
     public float flySpeed = 5f; // 飞向UI的速度
+    public AudioClip clip;
 
     private GameMgr GameMgr;
 
@@ -18,6 +19,8 @@ public class Key : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            // 播放音效
+            SoundPlayer.Instance.PlaySounds(clip);
             Collect();
             GameMgr.Instance.AddKeyIcon(); // 通知UI增加图标
         }

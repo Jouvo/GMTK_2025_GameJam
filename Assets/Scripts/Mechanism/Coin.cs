@@ -5,6 +5,7 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
     public float flySpeed = 5f; // 飞向UI的速度
+    public AudioClip clip;
 
     private GameMgr GameMgr;
 
@@ -18,6 +19,8 @@ public class Coin : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            // 播放音效
+            SoundPlayer.Instance.PlaySounds(clip);
             Collect();
             GameMgr.Instance.AddCoin(1);    // GameMgr添加金币
         }
@@ -38,6 +41,8 @@ public class Coin : MonoBehaviour
         //yield return new WaitForSeconds(0.1f);
 
         // 播放音效或粒子特效（可选）
+        
+        
 
         Destroy(gameObject); // 到达后销毁
     }

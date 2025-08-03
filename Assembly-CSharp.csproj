@@ -66,6 +66,8 @@
     <Compile Include="Assets\Scripts\Player\PlayerBubble.cs" />
     <Compile Include="Assets\Scripts\Mechanism\Altar.cs" />
     <Compile Include="Assets\Scripts\ChasingSpike.cs" />
+    <Compile Include="Assets\Scripts\StaticData.cs" />
+    <Compile Include="Assets\Scripts\ButtonCtrl.cs" />
     <Compile Include="Assets\Scripts\Mechanism\RespawnArea.cs" />
     <Compile Include="Assets\Scripts\Mechanism\Coin.cs" />
     <Compile Include="Assets\Scripts\LoopMap.cs" />
@@ -74,6 +76,7 @@
     <Compile Include="Assets\Scripts\PostProcess.cs" />
     <Compile Include="Assets\Scripts\Mechanism\DeadZone.cs" />
     <Compile Include="Assets\Scripts\Mechanism\Door.cs" />
+    <Compile Include="Assets\Scripts\SoundPlayer.cs" />
     <Compile Include="Assets\Scripts\Mechanism\DarkMask.cs" />
     <Compile Include="Assets\Scripts\ScreenScroll.cs" />
     <Compile Include="Assets\Scripts\VCam.cs" />
