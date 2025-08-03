@@ -46,8 +46,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae0ca99a7bf2d44ca42dce88cc18860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iceSprite: {fileID: -283194534, guid: f7f3447db5391744d8ac569f524fd70f, type: 3}
+  iceSprite: {fileID: -1531843234, guid: f7f3447db5391744d8ac569f524fd70f, type: 3}
   fireSprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  iceColor: {r: 0.6313726, g: 0.53333336, b: 0.53333336, a: 1}
+  fireColor: {r: 0.8666667, g: 0.29411766, b: 0, a: 1}
   canDestory: 0
 --- !u!212 &7890920340894843321
 SpriteRenderer:
@@ -89,9 +91,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.8679245, g: 0.29398263, b: 0, a: 1}
+  m_SortingOrder: 4
+  m_Sprite: {fileID: -1531843234, guid: f7f3447db5391744d8ac569f524fd70f, type: 3}
+  m_Color: {r: 1, g: 0.7607843, b: 0.5137255, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

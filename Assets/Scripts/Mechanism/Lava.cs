@@ -7,6 +7,8 @@ public class Lava : MonoBehaviour
 {
     public Sprite iceSprite;
     public Sprite fireSprite;
+    public Color iceColor;
+    public Color fireColor;
     public bool canDestory=false;
 
     private bool isRock;
@@ -38,11 +40,13 @@ public class Lava : MonoBehaviour
         {
             case EnvironmentState.Ice:  // 冰模式，变为岩石
                 _renderer.sprite = iceSprite;
+                _renderer.color = iceColor;
                 _collider.enabled = true;
                 isRock = true;
                 break;
             case EnvironmentState.Fire: // 火模式，变回岩浆
                 _renderer.sprite = fireSprite;
+                _renderer.color = fireColor;
                 _collider.enabled = true;
                 isRock = false;
                 break;

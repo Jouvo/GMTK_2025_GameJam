@@ -21,6 +21,8 @@ public class GameMgr : MonoBehaviour
     public int CoinNum = 0;
     public TextMeshProUGUI CoinText;
 
+    public GameObject winPanel;
+
     void Awake()
     {
         Instance = this;
@@ -60,6 +62,21 @@ public class GameMgr : MonoBehaviour
             Bubble.ChangeSprite(BubbleType.Key);
             return false;
         }
+    }
+
+    public void Win()
+    {
+        GameObject.FindObjectOfType<PlayerMovement>().enabled = false;
+        ScreenScroll[] sc = GameObject.FindObjectsOfType<ScreenScroll>();
+        foreach(ScreenScroll s in sc)
+        {
+            s.Switch(false);
+        }
+    }
+
+    public void OpenWinPanel()
+    {
+        winPanel.SetActive(true);
     }
 
 }

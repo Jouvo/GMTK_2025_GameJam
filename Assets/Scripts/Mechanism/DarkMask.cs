@@ -17,10 +17,13 @@ public class DarkMask : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag=="Player")
-        // 播放音效
-        SoundPlayer.Instance.PlaySounds(clip);
-        StartCoroutine(FadeOut());
+        if (collision.tag == "Player")
+        {
+            // 播放音效
+            SoundPlayer.Instance.PlaySounds(clip);
+            StartCoroutine(FadeOut());
+        }
+        
     }
 
     // 黑幕淡出
