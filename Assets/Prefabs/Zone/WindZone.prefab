@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -5337037461642488619}
   m_Layer: 7
   m_Name: WindZone
-  m_TagString: Untagged
+  m_TagString: TriggerArea
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,7 +48,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   windDirection: {x: 0, y: 1}
   windForce: 1000
-  maxDistance: 5
 --- !u!61 &3386793550446323396
 BoxCollider2D:
   m_ObjectHideFlags: 0

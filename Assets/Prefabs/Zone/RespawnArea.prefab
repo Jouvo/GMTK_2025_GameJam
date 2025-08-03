@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1818200009263413501}
   m_Layer: 7
   m_Name: RespawnArea
-  m_TagString: Untagged
+  m_TagString: TriggerArea
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

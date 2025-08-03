@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FireBall : MonoBehaviour
 {
+    public ParticleSystem explosionParticles; // 拖入粒子Prefab
 
     // 火球击中某物时
     private void OnTriggerEnter2D(Collider2D collision)
@@ -21,14 +22,22 @@ public class FireBall : MonoBehaviour
             lava.Hit();
             BulletDestroy();
         }
-        else if(collision.tag == "Default")
+        else if(collision.tag == "Untagged")
         {
+            Debug.Log("FireBall命中!!!");
             BulletDestroy();
         }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        
     }
 
     private void BulletDestroy()
     {
+        // 实例化粒子并播放
+        ParticleSystem particles = Instantiate(explosionParticles, transform.position, Quaternion.identity);
+        particles.Play();
         // 销毁子弹
         Destroy(gameObject);
     }

@@ -7,6 +7,9 @@ TagManager:
   - Distructible
   - Lava
   - Ice
+  - TriggerArea
+  - NPC
+  - Collections
   layers:
   - Default
   - TransparentFX
