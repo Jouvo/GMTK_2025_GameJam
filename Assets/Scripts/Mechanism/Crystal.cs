@@ -45,13 +45,13 @@ public class Crystal : MonoBehaviour
 
         // 点亮对应槽位
         gameMgr.crystalSlots[crystalID].color = new Color(1, 1, 1, 1);
-        gameMgr.crystalID.Add(crystalID);
         Destroy(gameObject); // 到达后销毁
     }
 
     public void CollectCrystal()
     {
         Debug.Log("收集水晶");
+        gameMgr.crystalID.Add(crystalID);
         // 转换屏幕坐标到世界坐标，调用水晶移动函数
         Vector3 TargetPos = GetWorldPositionOfUI(crystalID);
         TargetPos += new Vector3(4, 0.5f, 0);

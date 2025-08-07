@@ -24,7 +24,6 @@ public class PlayerBubble : MonoBehaviour
     {
         player=GameObject.FindObjectOfType<PlayerMovement>().gameObject;
         spriteRenderer=GetComponent<SpriteRenderer>();
-        gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -45,5 +44,10 @@ public class PlayerBubble : MonoBehaviour
                 spriteRenderer.sprite = needCrystal;
                 break;
         }
+    }
+
+    public void RemoveBubble()
+    {
+        Destroy(this.gameObject);
     }
 }

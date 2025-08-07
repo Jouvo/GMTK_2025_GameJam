@@ -5,12 +5,12 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     public Collider2D _collison;
-    private GameMgr GameMgr;
+    private GameMgr gameMgr;
     private bool isOpen = false;
 
     private void Start()
     {
-        GameMgr = GameMgr.Instance;
+        gameMgr = GameMgr.Instance;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -25,13 +25,16 @@ public class Door : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            GameMgr.Instance.playerBubble.SetActive(false);
+            if (gameMgr.Bubble != null)
+            {
+                gameMgr.Bubble.RemoveBubble();
+            }
         }
     }
 
     public void UseKey()
     {
-        isOpen = GameMgr.UseKey();
+        isOpen = gameMgr.UseKey();
         if(isOpen)
         {
             _collison.enabled = false;

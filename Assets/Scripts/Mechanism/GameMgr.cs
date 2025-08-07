@@ -5,7 +5,14 @@ using TMPro;
 
 public class GameMgr : MonoBehaviour
 {
-    public GameObject playerBubble;
+
+    [Header("关卡信息")]
+    public float BlockWidth=50;
+    public int BlockNum = 4;
+    public bool isIce = true;
+
+    [Header("UI")]
+    public GameObject BubblePrefab;
     public PlayerBubble Bubble;
     public enum BubbleType { Key, Crystal };
 
@@ -28,10 +35,6 @@ public class GameMgr : MonoBehaviour
         Instance = this;
     }
 
-    private void Start()
-    {
-        Bubble=playerBubble.GetComponent<PlayerBubble>();
-    }
 
     // 金币计数，更新UI显示
     public void AddCoin(int num)
@@ -58,8 +61,7 @@ public class GameMgr : MonoBehaviour
         }
         else  // 无钥匙，出现气泡提示
         {
-            playerBubble.SetActive(true);
-            Bubble.ChangeSprite(BubbleType.Key);
+            spawnBubble(BubbleType.Key);
             return false;
         }
     }
@@ -79,4 +81,10 @@ public class GameMgr : MonoBehaviour
         winPanel.SetActive(true);
     }
 
+    public void spawnBubble(BubbleType type)
+    {
+        GameObject playerBubble=GameObject.Instantiate(BubblePrefab,this.transform);
+        Bubble=playerBubble.GetComponent<PlayerBubble>();
+        Bubble.ChangeSprite(type);
+    }
 }
